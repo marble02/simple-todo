@@ -71,14 +71,8 @@
                 const tasksList = this.state.tasks;
                 console.log("item", item)
                 function updateList(task, i) {
-                        // console.log("task", task)
-                        // console.log("name", name)
-                        // console.log("i", i)
-                        // console.log("updated task", parseInt(i) !== parseInt(item))
                         return parseInt(i) !== parseInt(item);
                     }
-                // console.log("task", task)
-                // console.log("value", event.target.value)
                 this.setState(state => ({
                     tasks: state.tasks.filter(updateList)
             }));
