@@ -40,7 +40,7 @@
                         {this.state.tasks.map((task, i) =>
                             <li key={i}> 
                                 {task}
-                                <button name={task} onClick={this.removeTask}>remove</button>
+                                <button item={i} onClick={this.removeTask}>remove</button>
                             </li>
                         )}
                     </ul>
@@ -67,15 +67,15 @@
                 } 
             
             removeTask = () => {
-                const name = event.target.getAttribute("name");
+                const item = event.target.getAttribute("item");
                 const tasksList = this.state.tasks;
-                console.log("name", name)
-                function updateList(task) {
+                console.log("item", item)
+                function updateList(task, i) {
                         // console.log("task", task)
                         // console.log("name", name)
                         // console.log("i", i)
-                        console.log("updated task", task !== name)
-                        return task !== name;
+                        // console.log("updated task", parseInt(i) !== parseInt(item))
+                        return parseInt(i) !== parseInt(item);
                     }
                 // console.log("task", task)
                 // console.log("value", event.target.value)
