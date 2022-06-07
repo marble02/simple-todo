@@ -69,7 +69,6 @@
             removeTask = () => {
                 const item = event.target.getAttribute("item");
                 const tasksList = this.state.tasks;
-                console.log("item", item)
                 function updateList(task, i) {
                         return parseInt(i) !== parseInt(item);
                     }
